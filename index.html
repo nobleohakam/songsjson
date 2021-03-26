@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Song List</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     </head>
     <body>
         <h1>Song List</h1>
         <div id="data">Loading...</div>
 
-        <script type="text/javascript">
+        <!-- <div id="data">Loading...</div>
+        <div id="filter"></div>
+        <form>
+            <input type="button">
+            <select id="myselect" onchange="change_myselect(this.value)">
+                    <option value="">Choose an option:</option>
+                    <option value="hiphop">Hip Hop</option>
+                    <option value="r&b">R & B</option>
+                    <option value="disco">Disco</option>
+            </select>
 
-          function append(data){
-              var container = document.getElementById("data");
-                    for (var i = 0; i < songs.length; i++) {
-                        container.innerHTML.value  = JSON.stringify(songs[i]);
-                    }
-          }
+        </form> -->
 
+        <script language="javascript">
+            $.get( "https://raw.githubusercontent.com/nobleohakam/songsjson/main/songs.json", function(data) {
+                    str = JSON.stringify(data);
+                    document.write(str +"<br/>");
+                strHTML= "<ul>";
+                data.forEach(function(song){
+                strHTML += "<li>" + song.artist + "<li>";
+                strHTML += "<li>" + song.title + "<li>";
+                strHTML += "<li>" + song.genre + "<li>";
+                strHTML += "<li>" + song.year + "<li>";
+                    })
+            strHTML += "</ul>";
+            document.getElementById('data').innerHTML = strHTML;
+        })
 
         </script>
-
-
-
-
     </body>
 </html>
