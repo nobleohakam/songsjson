@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Song List</h1>
+    <div id="data">Loading...</div>
+
+    <script type="text/javascript"  >
+      fetch('songs.json')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        append(data);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+
+      function append(data){
+          var container = document.getElementById("data");
+                for (var i = 0; i < songs.length; i++) {
+                    var div = document.createElement("div");
+                    div.innerHTML = 'Artist: ' + songs[i].artist + ' ' + 'Title: '
+                    + songs[i].title + ' ' + 'Genre: ' + songs[i].genre + ' '
+                    + 'Year: ' + songs[i].year + ' ';
+                    mainContainer.appendChild(div);
+                }
+      }
+
+
+    </script>
+
+
+
+
+</body>
+</html>
