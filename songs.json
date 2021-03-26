@@ -1,20 +1,16 @@
-songs =
 [
-
     {
         "artist":"Craig Mack",
         "title":"Flava in Ya Ear",
         "genre":"Hip Hop",
         "year":"1994"
     },
-
     {
         "artist":"3LW",
         "title":"Playas Gon' Play",
         "genre":"R & B",
         "year":"2000"
     },
-
     {
         "artist":"Earth, Wind, & Fire",
         "title":"September",
