@@ -3,38 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Song List</title>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>    
     </head>
     <body>
-        <h1>Song List</h1>
-        <!-- <div id="data">Loading...</div> -->
-        <div >
-            <table id ="song_table">
-                <tr>
-                    <th>Artist</th>
-                    <th>Title</th>
-                    <th>Genre</th>
-                    <th>Year</th>
+        <div id="data"></div>
 
-                </tr>
-            </table>
-        </div>
-
-        <!-- <div id="data">Loading...</div>
-        <div id="filter"></div>
-        <form>
-            <input type="button">
-            <select id="myselect" onchange="change_myselect(this.value)">
-                    <option value="">Choose an option:</option>
-                    <option value="hiphop">Hip Hop</option>
-                    <option value="r&b">R & B</option>
-                    <option value="disco">Disco</option>
-            </select>
-
-        </form> -->
-
-
-        <!-- <script language="javascript">
+        <script language="javascript">
             //read data as a string
             $.get( "https://raw.githubusercontent.com/nobleohakam/songsjson/main/songs.json", function(data) {
                     str = JSON.stringify(data);
@@ -50,29 +24,7 @@
             document.getElementById('data').innerHTML = strHTML;
         })
 
-        </script> -->
-
-        <script language="javascript">
-            //display data as a table
-            $.get( "https://raw.githubusercontent.com/nobleohakam/songsjson/main/songs.json", function(song) {
-                var song_data = "";
-                song = JSON.parse(song);
-                song.forEach(function(song){
-                song_data += "<tr>";
-                song_data += "<td>"+ song.artist +"</td>";
-                song_data += "<td>"+ song.title +"</td>";
-                song_data += "<td>"+ song.genre +"</td>";
-                song_data += "<td>"+ song.year +"</td>";
-                song_data += "</tr>";
-                })
-            document.getElementById('song_table').innerHTML = song_data;
-        })
-
         </script>
 
-        <script language="javascript">
-
-
-        </script>
     </body>
 </html>
