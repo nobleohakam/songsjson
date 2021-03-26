@@ -1,63 +1,72 @@
 [
+
     {
         "artist":"Craig Mack",
         "title":"Flava in Ya Ear",
-        "genre":"Hip Hop",
+        "genre":["Hip Hop", "Rap"],
         "year":"1994"
     },
+
     {
         "artist":"3LW",
         "title":"Playas Gon' Play",
-        "genre":"R & B",
+        "genre":["Pop","R & B"],
         "year":"2000"
     },
+
     {
         "artist":"Earth, Wind, & Fire",
         "title":"September",
-        "genre":"Disco",
+        "genre":["Disco","Funk"],
         "year":"1978"
     },
 
     {
         "artist":"DMX",
         "title":"X Gon Give It To Ya",
-        "genre":"Hip Hop",
+        "genre":["Hip Hop", "Rap"],
         "year":"2007"
     },
+
     {
         "artist":"Aaliyah",
         "title":"Age Aint Nothing but a Number",
-        "genre":"R&B",
-        "Year":"1994"
+        "genre":["Pop","R & B"],
+        "year":"1994"
     },
+
     {
         "artist":"Evelyn Champagne King",
         "title":"Love Come Down",
-        "genre":"Disco",
+        "genre":["Disco","Funk"],
         "year":"1982"
     },
+
     {
         "artist":"The Notorious B.I.G",
         "title":"Juicy",
-        "genre":"Hip Hop",
+        "genre":["Hip Hop", "Rap"],
         "year":"1994"
     },
+
     {
         "artist":"Janet Jackson",
         "title":"Any Time, Any Place",
-        "genre":"R & B",
+        "genre":["Soul","R & B"],
         "year":"1993"
     },
+
     {
         "artist":"Chic",
         "title":"Good Times",
-        "genre":"Disco",
+        "genre":["Disco","Funk"],
         "year":"1979"
     },
+
     {
         "artist":"Jay Z",
         "title":"Brooklyns Finest",
-        "genre":"Hip Hop",
+        "genre":["Hip Hop", "Rap"],
         "year":"1996"
     }
 
