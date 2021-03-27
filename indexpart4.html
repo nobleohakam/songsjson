@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Song List</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <style>
+            html{
+                background-color:  #80FFB3;
+            }
+
+            h1 {
+                color: #2B80FF;
+                text-align: center;
+            }
+
+            form,div {
+                color: #8F57FF;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Song List</h1>
+        <form>
+            <select id="myselect">
+                    <option value="">Choose an option:</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="R & B">R & B</option>
+                    <option value="Disco">Disco</option>
+                    <option value="Rap">Rap</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Funk">Funk</option>
+            </select>
+            <button type="button" value="filter" onclick="filter()">Filter</button>
+        </form>
+
+        <div id="fil"></div>
+
+        <script language="javascript">
+            //display filter data
+
+            function filter(){
+
+         	let sel = document.getElementById('myselect')
+    	 	let val = sel.value
+    	 	$.get("https://raw.githubusercontent.com/nobleohakam/songsjson/main/songs.json", function(song) {
+    		 	var song_data = ""
+    		 	songs = JSON.parse(song)
+    		 	songs.forEach(function(song){
+
+    		 		for (let i = 0; i < song.genre.length; i++) {
+    		 			if (val == song.genre[i]) {
+                            song_data += song.title + "<br/>"
+                        }
+                        console.log(song.title);
+    		 		}
+
+    		 	})
+    		 	document.getElementById('fil').innerHTML = song_data;
+    		 })
+
+    	 }
+
+        </script>
+    </body>
+</html>
